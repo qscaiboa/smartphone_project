@@ -110,4 +110,4 @@ smart_phone_tidy_data <- tem2
 
 rownames(smart_phone_tidy_data) <- c(1:180)
 # write tidy data to txt file
-write.table(smart_phone_tidy_data, "smart_phone_tidy_data.txt" )
+write.table(smart_phone_tidy_data, "smart_phone_tidy_data.txt",  row.name=FALSE )
