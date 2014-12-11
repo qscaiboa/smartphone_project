@@ -7,7 +7,7 @@ data sciencce_Getting and Cleaning Data, assignment.
 get data from 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-unzip zip file and  read txt file to finish all following rwqirement:
+unzip zip file and  read txt file to finish all following requirement:
 
 1. Merges the training and the test sets to create one data set.
   final dataset name : all_data_with_ID
