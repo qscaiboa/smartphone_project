@@ -16,10 +16,9 @@ unzip zip file and  read txt file to finish all following requirement:
   final dataset name: mean_std_data_with_ID
 
 3. Uses descriptive activity names to name the activities in the data set
-  final dataset name: all_data_with_ID_new (from step1 dataset, not step2)
+  final dataset name: mean_std_data_descrnames
 
 4. Appropriately labels the data set with descriptive variable names. 
-  colnames(all_data_with_ID_new)[3] <- "Activity_name" 
-
+  
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
    final dataset name: smart_phone_tidy_data
