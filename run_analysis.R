@@ -44,11 +44,13 @@ all_data_with_ID <- rbind(train_data_with_ID, test_data_with_ID)
 #dim(all_data_with_ID)
 
 
- 
 #### 2 Extracts only the measurements on the mean and standard deviation for each measurement. 
 mean_col_list <- grep("mean",names(all_data_with_ID),ignore.case=TRUE)
 std_col_list <- grep("std",names(all_data_with_ID),ignore.case=TRUE)
 mean_std_data_with_ID <-all_data_with_ID[,c(1,2,mean_col_list,std_col_list)]
+
+
+#### 4 Appropriately labels the data set with descriptive variable names
 colnames(mean_std_data_with_ID)[1] <- "Subject_ID"
 colnames(mean_std_data_with_ID)[2] <- "Activity_ID"
 
@@ -57,10 +59,8 @@ colnames(mean_std_data_with_ID)[2] <- "Activity_ID"
 activity_labels <- read.table("activity_labels.txt",col.names=c("Activity_ID","Activity_NAME"))
     
 #### 3 Merge the activities datase with the mean/std values datase to get one dataset with descriptive activity names
- mean_std_data_descrnames <- merge(activity_labels, mean_std_data_with_ID, by.x="Activity_ID", by.y="Activity_ID",all=TRUE)
+mean_std_data_descrnames <- merge(activity_labels, mean_std_data_with_ID, by.x="Activity_ID", by.y="Activity_ID",all=TRUE)
  
-
-
 
 
 #### 5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
